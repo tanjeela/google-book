@@ -1,0 +1,118 @@
+$primary-color: rgb(195, 237, 195);
+$border-property: 2px solid #1b9546;
+
+h1 {
+  font-size: 90px;
+  margin-top: 10%;
+  margin-bottom: 4%;
+}
+
+@mixin display {
+  margin: 1%;
+  border: $border-property;
+  background-color:$primary-color;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #27ad32;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 2%;
+
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 4%;
+}
+
+.results {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media only screen and (max-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+  
+
+&__1 {
+  @include display;
+}
+&__2 {
+  @include display;
+
+}
+&__3 {
+  @include display;
+
+}
+&__4 {
+  @include display;
+
+}
+&__5 {
+  @include display;
+
+}
+&__6 {
+  @include display;
+
+}
+&__7 {
+  @include display;
+
+}
+&__8 {
+  @include display;
+
+}
+&__9 {
+  @include display;
+
+}
+
+}
+img {
+  margin: 6%;
+}
+
+p {
+  margin: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+  margin: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+// <---- Style Search Bar ------> //
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: $border-property;
+  width: 500px;
+  height: 40px;
+  font-size: medium;
+
+}
+
+#searchButton {
+  margin-left: 2%;
+    font-weight: bold;
+    height: 40px;
+}
+
+#clearButton {
+  margin-left: 2px;
+  font-weight: bold;
+  height: 40px;
+}
